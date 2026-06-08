@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Главная страница</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Ремонт телефонов | Главная страница</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Для доступности: описание страницы -->
+  <meta name="description" content="Профессиональный ремонт телефонов любых марок. Быстро, качественно, с гарантией.">
 </head>
 <body>
   <header>
-    <div>
-      <a href="index.html">Логотип</a>
-      <nav>
+    <div class="header-container">
+      <a href="/index.html" aria-label="Логотип, перейти на главную страницу">
+        <img src="img/log.jpg" alt="Логотип сервиса ремонта телефонов" width="100" height="50">
+      </a>
+      <nav aria-label="Основная навигация">
         <ul>
           <li><a href="index.html">Главная</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="catalog.html">Услуги</a></li>
           <li><a href="contacts.html">Контакты</a></li>
           <li><a href="feedback.html">Обратная связь</a></li>
         </ul>
@@ -22,81 +26,98 @@
   </header>
 
   <main>
-    <!-- Главный баннер -->
+    <!-- Главный баннер с фото -->
     <section class="hero">
       <div class="container">
-        <h1>Добро пожаловать!</h1>
-        <p>Лучшие предложения и высокое качество — всё для вашего комфорта.</p>
-        <a href="catalog.html" class="btn">Перейти в каталог</a>
+        <h1>Ремонт телефонов любой сложности</h1>
+        <p>Быстро, качественно, с гарантией на все виды работ.</p>
+        <a href="catalog.html" class="btn" role="button">Посмотреть услуги</a>
+        <!-- Добавляем фото в баннер -->
+        <div class="hero-image">
+          <img src="img/electronic-technician-holds-two-identical-smartphones-comparison-one-hand-broken-another-new.jpg" alt="Мастер ремонтирует смартфон" width="300" height="200">
+        </div>
       </div>
     </section>
 
-    <!-- Преимущества -->
+    <!-- Преимущества с иконками-фото -->
     <section class="advantages">
       <div class="container">
         <h2>Почему выбирают нас</h2>
         <div class="cards">
           <div class="card">
-            <div class="icon"></div>
+            
             <h3>Качество</h3>
-            <p>Гарантируем отличный результат и проверенные материалы.</p>
+            <p>Используем оригинальные запчасти и профессиональное оборудование.</p>
           </div>
           <div class="card">
-            <div class="icon"></div>
+            
             <h3>Быстрота</h3>
-            <p>Оперативная работа и соблюдение сроков.</p>
+            <p>Большинство ремонтов выполняем за 1–2 часа.</p>
           </div>
           <div class="card">
-            <div class="icon"></div>
+        
             <h3>Доступно</h3>
-            <p>Цены, которые приятно удивят, без скрытых комиссий.</p>
+            <p>Цены ниже рыночных, без скрытых комиссий.</p>
           </div>
           <div class="card">
-            <div class="icon"></div>
+      
             <h3>Поддержка</h3>
-            <p>Всегда на связи и помогаем с любым вопросом.</p>
+            <p>Консультация и диагностика — бесплатно.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Популярные товары/услуги -->
+    <!-- Популярные услуги с фото -->
     <section class="popular">
       <div class="container">
-        <h2>Популярное в этом месяце</h2>
+        <h2>Популярные услуги этого месяца</h2>
         <div class="products">
-          <div class="product">
-            <div class="image"></div>
-            <div class="info">
-              <h3>Название услуги/товара</h3>
-              <p>Краткое описание — поменяйте текст под свою тему.</p>
-              <div class="price">от 1000 ₽</div>
+          <article class="product">
+            <!-- Фото услуги -->
+            <div class="image">
+       
             </div>
-          </div>
-          <div class="product">
-            <div class="image"></div>
             <div class="info">
-              <h3>Другое предложение</h3>
-              <p>Измените контент, фото и цену в соответствии с темой.</p>
-              <div class="price">1500 ₽</div>
+              <h3>Замена экрана</h3>
+              <p>Замена разбитого дисплея с гарантией на работу.</p>
+              <div class="price">от 1500 ₽</div>
+              <button type="button" class="add-to-cart">Заказать</button>
             </div>
-          </div>
-          <div class="product">
-            <div class="image"></div>
+          </article>
+          <article class="product">
+            <div class="image">
+
+            </div>
             <div class="info">
-              <h3>Специальный курс</h3>
-              <p>Успейте забронировать место по акции.</p>
-              <div class="price">бесплатно</div>
+              <h3>Замена аккумулятора</h3>
+              <p>Установка нового аккумулятора с проверкой.</p>
+              <div class="price">1200 ₽</div>
+              <button type="button" class="add-to-cart">Заказать</button>
             </div>
-          </div>
-          <div class="product">
-            <div class="image"></div>
+          </article>
+          <article class="product">
+            <div class="image">
+ 
+            </div>
             <div class="info">
-              <h3>Набор опций</h3>
-              <p>Комбо выгоднее, чем по отдельности.</p>
-              <div class="price">2500 ₽</div>
+              <h3>Ремонт после воды</h3>
+              <p>Диагностика и восстановление после попадания влаги.</p>
+              <div class="price">2000 ₽</div>
+              <button type="button" class="add-to-cart">Заказать</button>
             </div>
-          </div>
+          </article>
+          <article class="product">
+            <div class="image">
+              
+            </div>
+            <div class="info">
+              <h3>Программный ремонт</h3>
+              <p>Прошивка, восстановление системы, удаление вирусов.</p>
+              <div class="price">800 ₽</div>
+              <button type="button" class="add-to-cart">Заказать</button>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -107,23 +128,31 @@
       <div class="footer-columns">
         <div class="column">
           <h4>О проекте</h4>
-          <p>Учебная вёрстка. Тема сайта задаётся студентом. Все страницы связаны.</p>
+          <p>Профессиональный сервис по ремонту смартфонов с 2015 года.</p>
         </div>
         <div class="column">
           <h4>Контакты</h4>
-          <p>Email: example@site.ru</p>
-          <p>Телефон: +7 (123) 456-78-90</p>
-          <p>Адрес: ул. Тверская, Москва</p>
+          <address>
+            <p>Email: <a href="mailto:repair@phoneservice.ru">repair@phoneservice.ru</a></p>
+            <p>Телефон: <a href="tel:+74951234567">+7 495 123-45-67</a></p>
+            <p>Адрес: ул. Тверская, д. 15, Москва</p>
+          </address>
         </div>
         <div class="column">
           <h4>Следите за нами</h4>
-          <p>Соцсети: VK, Max, Rutube</p>
+          <ul class="social-links">
+            <li><a href="#">VK</a></li>
+            <li><a href="#">Telegram</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Все права защищены. Учебный проект.</p>
+        <p>&copy; 2026 Все права защищены. Сервис ремонта телефонов.</p>
       </div>
     </div>
   </footer>
 </body>
 </html>
+
+
