@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог игровых ПК | CyberPC</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="logo">CyberPC</div>
+        <nav class="nav">
+            <a href="index.html">Главная</a>
+            <a href="contact.html" class="active">Каталог</a>
+            <a href="#">Сборка ПК</a>
+            <a href="akcii.html">Акции</a>
+        </nav>
+        <div class="actions">
+            <input type="text" placeholder="Поиск по каталогу..." class="search">
+            <div class="cart">Корзина (0)</div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="catalog-page">
+        <!-- Боковая панель -->
+        <aside class="sidebar">
+            <h3>Категории</h3>
+            <ul class="categories">
+                <li><a href="#">Бюджетные (от 60 000 ₽)</a></li>
+                <li><a href="#">Средний класс (от 100 000 ₽)</a></li>
+                <li><a href="#">Топовые (от 200 000 ₽)</a></li>
+            </ul>
+
+            <h3>Фильтры</h3>
+            <div class="filters">
+                <div class="filter">
+
+                <div class="filter">
+                    <label>Процессор:</label>
+                    <select>
+                        <option>Любой</option>
+                        <option>Intel Core i5</option>
+                        <option>Intel Core i7</option>
+                        <option>AMD Ryzen 5</option>
+                        <option>AMD Ryzen 7</option>
+                    </select>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Основная область -->
+        <section class="catalog">
+            <!-- Сортировка -->
+            <div class="sorting">
+                <span>Сортировка:</span>
+                <select>
+                    <option>По популярности</option>
+                    <option>По цене (возр.)</option>
+                    <option>По цене (убыв.)</option>
+                    <option>По новизне</option>
+                </select>
+            </div>
+
+            <!-- Сетка товаров -->
+            <div class="products-grid">
+                <!-- Карточка товара 1 -->
+                <div class="product-card">
+                    <img src="img/3060.jpg" width="200" height="200" alt="Игровой ПК 'Warrior'"> 
+                    <h4>Warrior</h4>
+                    <p class="specs">Intel i5-12400F, 16 ГБ ОЗУ, RTX 3060</p>
+                    <div class="price">98 990 ₽</div>
+                    <button class="btn-red">В корзину</button>
+                </div>
+
+                <!-- Карточка товара 2 -->
+                <div class="product-card">
+                    <img src="img/4080.jpg" alt="Игровой ПК 'Titan'">
+                    <h4>Titan</h4>
+                    <p class="specs">AMD Ryzen 7 5800X, 32 ГБ ОЗУ, RTX 4080</p>
+                    <div class="price">249 990 ₽</div>
+                    <button class="btn-red">В корзину</button>
+                </div>
+
+                <!-- Карточка товара 3 -->
+                <div class="product-card">
+                    <img src="img/4090.webp" alt="Игровой ПК 'Phantom'">
+                    <h4>Phantom</h4>
+                    <p class="specs">Intel i7-13700K, 64 ГБ ОЗУ, RTX 4090</p>
+                    <div class="price">499 990 ₽</div>
+                    <button class="btn-red">В корзину</button>
+                </div>
+            </div>
+
+            <!-- Пагинация -->
+            <div class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">→</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <p>&copy; 2026 Vi. Все права защищены.</p>
+    </footer>
+</body>
+</html>

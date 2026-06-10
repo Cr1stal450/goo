@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Акции | CyberPC</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="logo">CyberPC</div>
+        <nav class="nav">
+            <a href="index.html">Главная</a>
+            <a href="katalog.html">Каталог</a>
+            <a href="akcii.html" class="active">Акции</a>
+            <a href="contact.html">Контакты</a>
+        </nav>
+        <div class="actions">
+            <input type="text" placeholder="Поиск..." class="search">
+            <div class="cart">Корзина (0)</div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="promo-page">
+        <h1>Акции и скидки</h1>
+
+        <!-- Баннеры акций -->
+        <section class="promo-banners">
+            <div class="promo-banner">
+                <h2>Чёрная пятница!</h2>
+                <p>Скидки до 30% на все игровые ПК</p>
+                <a href="katalog.html" class="btn-red-link">Смотреть каталог</a>
+            </div>
+
+        </section>
+
+        <!-- Акционные товары -->
+        <section class="promo-products">
+            <h2>Товары со скидкой</h2>
+            <div class="products-grid">
+                <!-- Карточка товара 1 -->
+                <div class="product-card">
+                    <span class="discount-tag">-20%</span>
+                    <img src="img/3060.jpg" width="200" height="200" alt="Игровой ПК 'Warrior'">
+                    <h4>Warrior</h4>
+                    <p class="specs">Intel i5-12400F, 16 ГБ ОЗУ, RTX 3060</p>
+                    <div class="price">
+                        <span class="old-price">123 738 ₽</span>
+                        <span class="new-price">98 990 ₽</span>
+                    </div>
+                    <button class="btn-red">В корзину</button>
+                </div>
+
+                <!-- Карточка товара 2 -->
+                <div class="product-card">
+                    <span class="discount-tag">-15%</span>
+                    <img src="img/4080.jpg" width="200" height="200" alt="Игровой ПК 'Titan'">
+                    <h4>Titan</h4>
+                    <p class="specs">AMD Ryzen 7 5800X, 32 ГБ ОЗУ, RTX 4080</p>
+                    <div class="price">
+                <span class="old-price">294 106 ₽</span>
+                <span class="new-price">249 990 ₽</span>
+            </div>
+            <button class="btn-red">В корзину</button>
+        </div>
+    </section>
+
+    <!-- Таймер акции -->
+    <section class="countdown">
+        <h3>Акция заканчивается через:</h3>
+        <div id="timer">
+            <span id="days">00</span>д
+            <span id="hours">00</span>ч
+            <span id="minutes">00</span>м
+            <span id="seconds">00</span>с
+
+
+        </div>
+    </section>
+</main>
+
+<!-- Футер -->
+<footer class="footer">
+    <p>&copy; 2024 CyberPC. Все права защищены.</p>
+</footer>
+</body>
+</html>
