@@ -129,27 +129,7 @@ body {
 .gallery-item:hover::before {
     background: rgba(229, 0, 0, 0.1);
 }
-/* Адаптивность */
-@media (max-width: 768px) {
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 15px;
-    }   
-    .section-title {
-        font-size: 2rem;
-        margin-bottom: 30px;
-    }
-}
-@media (max-width: 480px) {
-    .gallery-grid {
-        grid-template-columns: 1fr; /* Одна колонка на мобильных */
-        gap: 10px;
-    }
-    
-    .container {
-        padding: 0 10px;
-    }
-}
+
 /* katalog */
 /* Основной контент */
 .catalog-page {
@@ -395,7 +375,7 @@ body {
     margin-bottom: 10px;
 }
 .info-card a {
-    color: #ff0000;
+    color: #E0E0E0;
     text-decoration: none;
 }
 .info-card a:hover {
@@ -486,6 +466,7 @@ body {
     align-items: center;
     padding: 20px 5%;
     border-bottom: 1px solid #333;
+    text-align: center;
 }
 .logo {
     font-size: 24px;
@@ -506,6 +487,7 @@ body {
     color: #E0E0E0;
     text-decoration: none;
     margin-left: 20px;
+    text-align: center;
 }
 .nav a:hover,
 .nav a.active {
@@ -596,4 +578,408 @@ body {
     display: flex;
     gap: 15px;
     margin-bottom: 15px;
+}
+/* Адаптивность */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #000;
+    color: #FFF;
+}
+
+/* Контейнер для центрирования */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #E50000;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    color: #E0E0E0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: #FF0000;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search {
+    padding: 8px 15px;
+    background: #121212;
+    border: 1px solid #444;
+    color: #FFF;
+    border-radius: 4px;
+}
+
+.cart {
+    background: #E50000;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Главная страница */
+
+.banner {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #FF0000;
+}
+
+.category {
+    padding: 20px;
+    border: 2px solid #333;
+    transition: border-color 0.3s;
+}
+
+.category:hover {
+    border-color: #E50000;
+}
+
+/* Заголовок секции */
+.section-title {
+    text-align: center;
+    color: #E50000;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #FF0000;
+    margin: 15px auto 0;
+}
+
+/* Сетка галереи */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Карточки изображений */
+.gallery-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(229, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s ease;
+    pointer-events: none;
+}
+
+.gallery-item:hover::before {
+    background: rgba(229, 0, 0, 0.1);
+}
+
+/* Каталог */
+.catalog-page {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+    padding: 30px 5%;
+}
+
+.sidebar h3 {
+    color: #E50000;
+    margin: 20px 0 10px;
+    font-size: 18px;
+}
+
+.categories a {
+    display: block;
+    color: #E0E0E0;
+    padding: 8px 0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sorting {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #E0E0E0;
+}
+
+.sorting select {
+    padding: 8px;
+    background: #121212;
+    border: 1px solid #444;
+    color: #FFF;
+    border-radius: 4px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    border: 1px solid #333;
+    padding: 15px;
+    text-align: center;
+    transition: border-color 0.3s, transform 0.3s;
+    background: #0A0A0A;
+    position: relative;
+}
+
+.product-card:hover {
+    border-color: #E50000;
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.product-card h4 {
+    margin-bottom: 10px;
+    color: #FF0000;
+    font-size: 18px;
+}
+
+.price {
+    font-weight: bold;
+    color: #FFD700;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+/* Кнопка */
+.btn-red {
+    background: #E50000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.btn-red:hover {
+    background: #B30000;
+}
+
+/* Футер */
+.footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #333;
+    color: #666;
+    margin-top: 50px;
+}
+
+/* Адаптивность */
+
+/* ПК (1200+ px) */
+@media (min-width: 1200px) {
+    .banner {
+        height: 60vh;
+        padding: 10% 0;
+    }
+    
+    .gallery-grid,
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    
+    .catalog-page {
+        padding: 40px 8%;
+    }
+    
+    .section-title {
+        font-size: 3rem;
+        margin-bottom: 50px;
+    }
+    
+    .category {
+        padding: 30px;
+        font-size: 16px;
+    }
+}
+
+/* Планшеты (768–1199 px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .header {
+        padding: 15px 4%;
+    }
+    
+    .banner {
+        height: 60vh;
+        text-align: left;
+        padding-left: 5%;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .catalog-page {
+        grid-template-columns: auto 1fr;
+        gap: 20px;
+        padding: 30px 4%;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 35px;
+    }
+    
+    .product-card {
+        padding: 12px;
+    }
+    
+    .product-card img {
+        height: 250px;
+    }
+}
+
+/* Телефоны (до 767 px) */
+@media (max-width: 767px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 2%;
+    }
+    
+    .nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .banner {
+        height: auto;
+        min-height: 300px;
+        padding: 20px 5%;
+        text-align: center;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .banner h1 {
+        font-size: 28px;
+        margin-bottom: 5px;
+    }
+    
+    .gallery-grid,
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .catalog-page {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 25px 3%;
+    }
+    
+    .sidebar {
+        margin-bottom: 20px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+    
+    .product-card {
+        padding: 10px;
+    }
+    
+    .product-card img {
+        height: 220px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
 }
