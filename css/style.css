@@ -16,10 +16,19 @@ body {
     padding: 20px 5%;
     border-bottom: 1px solid #333;
 }
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #E50000;
+
+/* Стили для логотипа-картинки */
+.site-logo {
+    height: 50px;       
+    display: block;     
+}
+
+
+.header {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 15px 0;
 }
 .cart {
     background: #E50000;
